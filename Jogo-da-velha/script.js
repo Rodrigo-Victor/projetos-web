@@ -25,18 +25,24 @@ function play(x) {
   changePlayer()
 }
 
-function winner() {
+function teste(x) {
+  if(x != '_') {
+    console.log(`O jogador ${x} venceu!!`)
+    endGame()
+  }
+}
 
+function winner() {
   if(a1.value == a2.value && a1.value == a3.value) {
-    console.log(`O jogador ${a1.value} venceu!!`)
+    teste(a1.value)
   } else if(b1.value == b2.value && b1.value == b3.value) {
-    console.log(`O jogador ${b1.value} venceu!!`)
+    teste(b1.value)
   } else if(c1.value == c2.value && c1.value == c3.value) {
-    console.log(`O jogador ${c1.value} venceu!!`)
+    teste(c1.value)
   } else if(a1.value == b2.value && a1.value == c3.value) {
-    console.log(`O jogador ${a1.value} venceu!!`)
+    teste(a1.value)
   } else if(c1.value == b2.value && c1.value == a3.value) {
-    console.log(`O jogador ${c1.value} venceu!!`)
+    teste(c1.value)
   }
 }
 
@@ -59,64 +65,3 @@ function reiniciar() {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-  // function winner() {
-  //   if(a1.value == 'X' && a2.value == 'X' && a3.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(b1.value == 'X' && b2.value == 'X' && b3.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(c1.value == 'X' && c2.value == 'X' && c3.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(a1.value == 'X' && b1.value == 'X' && c1.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(a2.value == 'X' && b2.value == 'X' && c2.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(a3.value == 'X' && b3.value == 'X' && c3.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(a1.value == 'X' && b2.value == 'X' && c3.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(a3.value == 'X' && b2.value == 'X' && c1.value == 'X') {
-  //     console.log("Jogador 'X' Ganhou!")
-  //     endGame()
-  //   } else if(a1.value == 'O' && a2.value == 'O' && a3.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(b1.value == 'O' && b2.value == 'O' && b3.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(c1.value == 'O' && c2.value == 'O' && c3.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(a1.value == 'O' && b1.value == 'O' && c1.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(a2.value == 'O' && b2.value == 'O' && c2.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(a3.value == 'O' && b3.value == 'O' && c3.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(a1.value == 'O' && b2.value == 'O' && c3.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   } else if(a3.value == 'O' && b2.value == 'O' && c1.value == 'O') {
-  //     console.log("Jogador 'O' Ganhou!")
-  //     endGame()
-  //   }
-  // }
