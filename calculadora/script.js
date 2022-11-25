@@ -9,10 +9,10 @@ function add(x) {
 function addOp(x) {
   if (resultado.value == '') {
     resultado.value = ''
-  } else if (teste3() == true) {
-    resultado.value = teste2(x)
-  }else if(teste() == true) {
-    igual()
+  } else if (test3() == true) {
+    resultado.value = test2(x)
+  }else if(test() == true) {
+    iqual()
     resultado.value += x
   } else {
     resultado.value += x
@@ -20,7 +20,7 @@ function addOp(x) {
 }
 
 // RESULTADO
-function igual() {
+function iqual() {
 
   if(resultado.value.indexOf('+') != -1) {
     let newRes = resultado.value.split('+')
@@ -45,18 +45,18 @@ function igual() {
 }
 
 // LIMPAR
-function limpar() {
+function clear() {
   resultado.value = '';
 }
 
 // TESTE PARA TER SOMENTE UM OPERADOR
-function teste() {
+function test() {
   if(resultado.value.indexOf('/') != -1 || resultado.value.indexOf('*') != -1 || resultado.value.indexOf('-') != -1 || resultado.value.indexOf('+') != -1) {
     return true
   }
 }
 // TESTE PARA TROCAR OPERADOR
-function teste2(x) {
+function test2(x) {
   let t = resultado.value[resultado.value.length-1]
   
   if( t == "/"){
@@ -73,8 +73,8 @@ function teste2(x) {
     return res
   }
 }
-// TESTE PARA VERIFICAR SE O ULTIMO DIGITE É UM OPERADOR
-function teste3() {
+// test PARA VERIFICAR SE O ULTIMO DIGITE É UM OPERADOR
+function test3() {
   let t = resultado.value[resultado.value.length-1]
   
   if(t == "/" || t == "*" || t == "-" || t == "+") {
