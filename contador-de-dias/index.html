@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Documente</title>
+</head>
+<body onload="choiceDate()">
+  <section class="choiceDate">
+    <h1>Contador de Dias</h1>
+
+    <div class="choice">
+      <form>
+        <span>Escolha uma Data:</span>
+        <input type="text" id="cDay" onchange="valD()" onclick="clean(this)" value="01" maxlength="2">/
+        <input type="text" id="cMonth" onchange="valM()" onclick="clean(this)" value="01" maxlength="2">/
+        <input type="text" id="cYear" onchange="valY()" onclick="clean(this)" value="2024" maxlength="4">
+      </form>
+    </div>
+  </section>
+
+  <section class="showDiff">
+    <div class="sDays">
+      <span id="nDays">0</span> 
+      <p>Dias</p>
+    </div>
+
+    <div class="sHours">
+      <span id="nHours">0</span> 
+      <p>Horas</p>
+    </div>
+
+    <div class="sMin">
+      <span id="nMin">0</span> 
+      <p>Minutos</p>
+    </div>
+
+    <div class="sSec">
+      <span id="nSec">0</span> 
+      <p>Segundos</p>
+    </div>
+  </section>
+
+  <section class="showError">
+    Data escolhida já Passou!
+  </section>
+</body>
+</html>
